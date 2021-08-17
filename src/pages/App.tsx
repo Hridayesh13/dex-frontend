@@ -12,6 +12,10 @@ import { ApplicationModal } from '../state/application/actions'
 import { useModalOpen, useToggleModal } from '../state/application/hooks'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
 
+import Pool from './Pool'
+import PoolFinder from './PoolFinder'
+import { RedirectDuplicateTokenIdsV2 } from './AddLiquidity/redirects'
+
 const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
@@ -66,6 +70,11 @@ export default function App() {
             <Popups />
             <Polling />
             <TopLevelModals />
+            <Switch>
+              <Route exact strict path="/pool" component={Pool} />
+              <Route exact strict path="/add/:currencyIdA?/:currencyIdB?" component={RedirectDuplicateTokenIdsV2} />
+              <Route exact strict path="/pool/find" component={PoolFinder} />
+            </Switch>
             <Marginer />
           </BodyWrapper>
         </AppWrapper>

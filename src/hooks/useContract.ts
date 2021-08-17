@@ -16,6 +16,7 @@ import ERC20_ABI from 'abis/erc20.json'
 import ERC20_BYTES32_ABI from 'abis/erc20_bytes32.json'
 import WETH_ABI from 'abis/weth.json'
 import EIP_2612 from 'abis/eip_2612.json'
+import FACTORY_ABI from 'abis/factory.json'
 
 import {
   NONFUNGIBLE_POSITION_MANAGER_ADDRESSES,
@@ -25,6 +26,7 @@ import {
   MERKLE_DISTRIBUTOR_ADDRESS,
   MULTICALL_ADDRESS,
   V2_ROUTER_ADDRESS,
+  V2_FACTORY_ADDRESS,
   ENS_REGISTRAR_ADDRESSES,
   GOVERNANCE_ALPHA_V0_ADDRESSES,
   GOVERNANCE_ALPHA_V1_ADDRESSES,
@@ -100,6 +102,10 @@ export function usePairContract(pairAddress?: string, withSignerIfPossible?: boo
 
 export function useV2RouterContract(): Contract | null {
   return useContract(V2_ROUTER_ADDRESS, IUniswapV2Router02ABI, true)
+}
+
+export function useFactoryContract(): Contract | null {
+  return useContract(V2_FACTORY_ADDRESS, FACTORY_ABI, true)
 }
 
 export function useMulticall2Contract() {

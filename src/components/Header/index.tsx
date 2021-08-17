@@ -285,7 +285,7 @@ export default function Header() {
         >
           <Trans>Pool</Trans>
         </StyledNavLink>
-        {chainId && chainId === SupportedChainId.MAINNET && (
+        {/* {chainId && chainId === SupportedChainId.MAINNET && (
           <StyledNavLink id={`stake-nav-link`} to={'/vote'}>
             <Trans>Vote</Trans>
           </StyledNavLink>
@@ -293,7 +293,7 @@ export default function Header() {
         <StyledExternalLink id={`stake-nav-link`} href={infoLink}>
           <Trans>Charts</Trans>
           <sup>↗</sup>
-        </StyledExternalLink>
+        </StyledExternalLink> */}
       </HeaderLinks>
 
       <HeaderControls>
