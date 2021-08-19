@@ -15,6 +15,9 @@ import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
 import Pool from './Pool'
 import PoolFinder from './PoolFinder'
 import { RedirectDuplicateTokenIdsV2 } from './AddLiquidity/redirects'
+import RemoveLiquidity from './RemoveLiquidity'
+import Swap from './Swap'
+import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -72,8 +75,13 @@ export default function App() {
             <TopLevelModals />
             <Switch>
               <Route exact strict path="/pool" component={Pool} />
-              <Route exact strict path="/add/:currencyIdA?/:currencyIdB?" component={RedirectDuplicateTokenIdsV2} />
               <Route exact strict path="/pool/find" component={PoolFinder} />
+              <Route exact strict path="/add/:currencyIdA?/:currencyIdB?" component={RedirectDuplicateTokenIdsV2} />
+              <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
+
+              <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
+              <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
+              <Route exact strict path="/swap" component={Swap} />
             </Switch>
             <Marginer />
           </BodyWrapper>
