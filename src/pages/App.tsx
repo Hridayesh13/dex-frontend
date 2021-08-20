@@ -1,3 +1,5 @@
+import '../styles/index.css'
+
 import ApeModeQueryParamReader from 'hooks/useApeModeQueryParamReader'
 import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components/macro'
