@@ -32,7 +32,7 @@ const mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: typeof css } 
   {}
 ) as any
 
-const white = '#FFFFFF'
+const white = '#03fcec'
 const black = '#000000'
 
 function colors(darkMode: boolean): Colors {
@@ -49,7 +49,7 @@ function colors(darkMode: boolean): Colors {
     text5: darkMode ? '#2C2F36' : '#EDEEF2',
 
     // backgrounds / greys
-    bg0: darkMode ? '#191B1F' : '#FFF',
+    bg0: darkMode ? '#191B1F' : '#03fcec',
     bg1: darkMode ? '#212429' : '#F7F8FA',
     bg2: darkMode ? '#2C2F36' : '#EDEEF2',
     bg3: darkMode ? '#40444F' : '#CED0D9',
@@ -62,7 +62,7 @@ function colors(darkMode: boolean): Colors {
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: darkMode ? '#2172E5' : '#E8006F',
+    primary1: darkMode ? '#2172E5' : '#5b6fd4',
     primary2: darkMode ? '#3680E7' : '#FF8CC3',
     primary3: darkMode ? '#4D8FEA' : '#FF99C9',
     primary4: darkMode ? '#376bad70' : '#F6DDE8',
@@ -72,7 +72,7 @@ function colors(darkMode: boolean): Colors {
     primaryText1: darkMode ? '#438BF0' : '#D50066',
 
     // secondary colors
-    secondary1: darkMode ? '#2172E5' : '#E8006F',
+    secondary1: darkMode ? '#2172E5' : '#5b6fd4',
     secondary2: darkMode ? '#17000b26' : '#F6DDE8',
     secondary3: darkMode ? '#17000b26' : '#FDEAF1',
 
