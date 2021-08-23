@@ -20,6 +20,8 @@ import { RedirectDuplicateTokenIdsV2 } from './AddLiquidity/redirects'
 import RemoveLiquidity from './RemoveLiquidity'
 import Swap from './Swap'
 import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
+import Earn from './Earn'
+import Manage from './Earn/Manage'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -81,6 +83,8 @@ export default function App() {
               <Route exact strict path="/add/:currencyIdA?/:currencyIdB?" component={RedirectDuplicateTokenIdsV2} />
               <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
               <Route exact strict path="/swap" component={Swap} />
+              <Route exact strict path="/farm" component={Earn} />
+              <Route exact strict path="/farm/:currencyIdA/:currencyIdB" component={Manage} />
             </Switch>
             <Marginer />
           </BodyWrapper>

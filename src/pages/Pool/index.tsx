@@ -188,7 +188,7 @@ export default function Pool() {
               <TitleRow style={{ marginTop: '1rem' }} padding={'0'}>
                 <HideSmall>
                   <TYPE.mediumHeader style={{ marginTop: '0.5rem', justifySelf: 'flex-start' }}>
-                    <Trans>Your V2 liquidity</Trans>
+                    <Trans>Your Liquidity</Trans>
                   </TYPE.mediumHeader>
                 </HideSmall>
                 <ButtonRow>
@@ -197,7 +197,7 @@ export default function Pool() {
                   </ResponsiveButtonSecondary>
                   <ResponsiveButtonPrimary id="find-pool-button" as={Link} to="/pool/find" padding="6px 8px">
                     <Text fontWeight={500} fontSize={16}>
-                      <Trans>Import Pool</Trans>
+                      <Trans>Find a pair</Trans>
                     </Text>
                   </ResponsiveButtonPrimary>
                   <ResponsiveButtonPrimary id="join-pool-button" as={Link} to="/add/ETH" padding="6px 8px">

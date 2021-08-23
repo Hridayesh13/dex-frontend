@@ -177,7 +177,7 @@ const ToggleMenuItem = styled.button`
   }
 `
 
-const CODE_LINK = 'https://github.com/Uniswap/uniswap-interface'
+const CODE_LINK = 'https://github.com/Hridayesh13/dex-frontend'
 
 function LanguageMenuItem({ locale, active, key }: { locale: SupportedLocale; active: boolean; key: string }) {
   const { to, onClick } = useLocationLinkProps(locale)
@@ -242,7 +242,7 @@ export default function Menu() {
             default:
               return (
                 <MenuFlyout>
-                  <MenuItem href="https://uniswap.org/">
+                  {/* <MenuItem href="https://uniswap.org/">
                     <div>
                       <Trans>About</Trans>
                     </div>
@@ -253,14 +253,14 @@ export default function Menu() {
                       <Trans>Docs</Trans>
                     </div>
                     <BookOpen opacity={0.6} size={16} />
-                  </MenuItem>
+                  </MenuItem> */}
                   <MenuItem href={CODE_LINK}>
                     <div>
                       <Trans>Code</Trans>
                     </div>
                     <Code opacity={0.6} size={16} />
                   </MenuItem>
-                  <MenuItem href="https://discord.gg/FCfyBSbCU5">
+                  {/* <MenuItem href="https://discord.gg/FCfyBSbCU5">
                     <div>
                       <Trans>Discord</Trans>
                     </div>
@@ -271,7 +271,7 @@ export default function Menu() {
                       <Trans>Analytics</Trans>
                     </div>
                     <PieChart opacity={0.6} size={16} />
-                  </MenuItem>
+                  </MenuItem> */}
                   <ToggleMenuItem onClick={() => setMenu('lang')}>
                     <div>
                       <Trans>Language</Trans>
@@ -282,7 +282,7 @@ export default function Menu() {
                     <div>{darkMode ? <Trans>Light Theme</Trans> : <Trans>Dark Theme</Trans>}</div>
                     {darkMode ? <Moon opacity={0.6} size={16} /> : <Sun opacity={0.6} size={16} />}
                   </ToggleMenuItem>
-                  {showUNIClaimOption && (
+                  {/* {showUNIClaimOption && (
                     <UNIbutton
                       onClick={openClaimModal}
                       padding="8px 16px"
@@ -292,7 +292,7 @@ export default function Menu() {
                     >
                       <Trans>Claim UNI</Trans>
                     </UNIbutton>
-                  )}
+                  )} */}
                 </MenuFlyout>
               )
           }
